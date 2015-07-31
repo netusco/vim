@@ -1,7 +1,52 @@
 execute pathogen#infect()
-filetyp off
+
+" General options
+set fileformat=unix
+set encoding=utf-8
+
+" Use vim defaults
+set nocompatible
+
+" Editor general features
+set number
+set numberwidth=5
 syntax on
+set autoread
+set noerrorbells
+set novisualbell
+set laststatus=2
+set writeany
+set showcmd
+set ruler
+set ttyfast
+set lazyredraw
+set mouse=a
+set backspace=indent,eol,start
+set history=100
+set undolevels=150
+set scrolloff=5 " Show 5 lines above/below the cursor when scrolling.
+set title " Set the title in the console.
+filetyp off
 filetype plugin indent on
+
+" Tabs, spaces, indentation...
+set nowrapscan
+set nowrap
+set showtabline=4
+set expandtab " will insert spaces for tabs
+set smartindent
+set foldmethod=marker
+set showmatch
+set matchtime=3
+set tabstop=4 " will set the tabs to display as four spaces
+set shiftwidth=4 " indents will have a width of  
+set softtabstop=4
+
+" Search options
+set ignorecase
+set incsearch
+set infercase
+set hlsearch
 
 " Defining <leader> key
 :let mapleader=" "
@@ -42,10 +87,6 @@ nnoremap <F9> :NERDTreeFind<CR>
 " Toggle Tabs Easily
 nnoremap <C-l> :tabprevious<CR>
 nnoremap <C-h> :tabnext<CR>
-
-" Numbers
-set number
-set numberwidth=5
 
 " FILE SEARCH AG
 " The Silver Searcher
@@ -103,12 +144,6 @@ if has("autocmd")
 	autocmd FileType make set tabstop=4444 shiftwidth=4 softtabstop=0 noexpandtab
 endif
 
-" For everything else, use a tab width of 4 space chars.
-filetype plugin indent on 
-set tabstop=4 " will set the tabs to display as four spaces
-set shiftwidth=4 " indents will have a width of  
-set expandtab " will insert spaces for tabs
-
 " Inserting a new line without entering to insert mode
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
@@ -123,4 +158,3 @@ set splitright
 
 " Highlight cursor line
 :set cursorline
-"
