@@ -12,7 +12,11 @@ map <Leader>q :qall<CR>
 " Tagbar Plugin
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
+
+" SuperTab
 let g:SuperTabDefaultCompletionType = "context"
+
+" Tagbar
 let g:tagbar_usearrows = 1
 nnoremap <F7> :TagbarToggle<CR>
 
