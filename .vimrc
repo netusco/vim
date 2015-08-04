@@ -20,7 +20,7 @@ set showcmd
 set ruler
 set ttyfast
 set lazyredraw
-set mouse=a
+" set mouse=a
 set backspace=indent,eol,start
 set history=100
 set undolevels=150
@@ -68,6 +68,7 @@ nnoremap <F7> :TagbarToggle<CR>
 " Solarize Color Scheme
 syntax enable
 set background=dark
+set t_Co=256 
 let g:solarized_termtrans=1
 let g:solarized_termcolors=256
 let g:solarized_contrast="high"
