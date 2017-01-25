@@ -59,7 +59,7 @@ autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=
 autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
 
 " SuperTab
-let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabDefaultCompletionType = ""
 
 " Tagbar
 let g:tagbar_usearrows = 1
@@ -82,6 +82,7 @@ hi CursorLineNr guifg=#050505
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" Opens in a new tab
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <F9> :NERDTreeFind<CR>
 
